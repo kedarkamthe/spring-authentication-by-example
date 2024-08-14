@@ -9,3 +9,8 @@ logging:
     org:
       springframework:
         security: INFO
+
+server:
+  servlet:
+    session:
+      persistent: false

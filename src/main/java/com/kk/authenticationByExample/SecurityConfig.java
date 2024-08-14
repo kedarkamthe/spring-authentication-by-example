@@ -11,9 +11,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain web(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authorize) -> authorize
-                        .requestMatchers("/endpoint").hasAuthority("USER")
-                        .anyRequest().authenticated()
-                );
+                        .requestMatchers("/").permitAll()
+                        .anyRequest()
+                        .authenticated()
+                )
+                .formLogin(l -> l.defaultSuccessUrl("/private"))
+                .logout(l -> l.logoutSuccessUrl("/"));
         return http.build();
     }
 }
