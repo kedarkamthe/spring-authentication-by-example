@@ -1,6 +1,10 @@
 spring:
   application:
     name: authenticationByExample
+  security:
+    user:
+      name: kedar
+      password: test1234
 
 # To show default password on console when application started
 # with basic spring security configuration
@@ -14,3 +18,5 @@ server:
   servlet:
     session:
       persistent: false
+
+

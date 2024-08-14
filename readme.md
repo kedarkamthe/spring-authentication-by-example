@@ -6,4 +6,6 @@
     It adds a user with username as `user` and password would be printed as **default password**  in console when application starts
    **Note**: to see the default password on console you need to set log level in application.yaml 
    for below spring package`logging.level.org.springframework.security: INFO`
-2. 
+2. Add username and password to `application.yml` and add `.httpBasic(Customizer.withDefaults())` in `SecurityFilterChain` bean. 
+   With this change you will be able to login with username/password provided in `application.yml`
+3. 
