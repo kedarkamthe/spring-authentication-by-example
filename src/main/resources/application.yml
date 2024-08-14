@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: authenticationByExample
+
+# To show default password on console when application started
+# with basic spring security configuration
+logging:
+  level:
+    org:
+      springframework:
+        security: INFO
