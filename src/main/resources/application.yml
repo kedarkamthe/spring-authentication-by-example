@@ -5,6 +5,24 @@ spring:
     user:
       name: kedar
       password: test1234
+    oauth2:
+      client:
+        provider:
+          external:
+            issuer-uri: http://localhost:9091/realms/externalauth
+        registration:
+          external:
+            client-id: external-client
+            client-name: External spring client
+            client-secret: eq6ViLGQXEUmNCdk1Q5onYwZqb8vggHa
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - offline_access
+              - profile
+
+
+
 
 # To show default password on console when application started
 # with basic spring security configuration
@@ -19,4 +37,6 @@ server:
     session:
       persistent: false
 
+
+## keycloak
 

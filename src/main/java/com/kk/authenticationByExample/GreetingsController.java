@@ -1,6 +1,7 @@
 package com.kk.authenticationByExample;
 
 import org.springframework.security.core.Authentication;
+import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +20,9 @@ class GreetingsController {
     }
 
     private static String getName(Authentication authentication) {
-        /*if (authentication.getPrincipal() instanceof OidcUser oidcUser) {
-            return oidcUser.getEmail();
-        }*/
+        if (authentication.getPrincipal() instanceof OidcUser oidcUser) {
+            return oidcUser.getName();
+        }
         return authentication.getName();
     }
 

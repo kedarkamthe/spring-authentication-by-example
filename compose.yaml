@@ -1,0 +1,11 @@
+services:
+  keycloak:
+    command:
+      - start-dev
+    image: keycloak/keycloak
+    ports:
+      - 9091:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: password
+
