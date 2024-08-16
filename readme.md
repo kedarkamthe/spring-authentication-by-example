@@ -7,5 +7,12 @@
    **Note**: to see the default password on console you need to set log level in application.yaml 
    for below spring package`logging.level.org.springframework.security: INFO`
 2. Add username and password to `application.yml` and add `.httpBasic(Customizer.withDefaults())` in `SecurityFilterChain` bean. 
-   With this change you will be able to login with username/password provided in `application.yml`
-3. Added oAuth2 client support with Keycloak using reference [here](https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak)
+   With this change you will be able to `login` with `username/password` provided in `application.yml`
+3. Added `oAuth2 client` support with `Keycloak` using reference [here](https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak)
+4. Added `Jwt based authentication` for `/greet` api present in Postman collection using `KeyCloak` as resource server used reference [here](https://www.baeldung.com/spring-boot-keycloak)
+
+
+
+## Data Setup 
+1. Import realm in `/setup` folder in keycloak
+2. Create user in realm imported in step-1

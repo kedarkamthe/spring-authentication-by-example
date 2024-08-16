@@ -6,11 +6,25 @@ spring:
       name: kedar
       password: test1234
     oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9091/realms/externalauth
       client:
         provider:
           external:
             issuer-uri: http://localhost:9091/realms/externalauth
+          external-jwt:
+            issuer-uri: http://localhost:9091/realms/externalauth
+            user-name-attribute: preferred_username
         registration:
+          external-jwt:
+            client-id: external-jwt-client
+            client-name: External spring jwt client
+            authorization-grant-type: authorization_code
+            client-secret: eq6ViLGQXEUmNCdk1Q5onYwZqb8vggHa
+            scope:
+              - openid
+              - profile
           external:
             client-id: external-client
             client-name: External spring client
