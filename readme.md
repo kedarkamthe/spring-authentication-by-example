@@ -1,5 +1,9 @@
 # Understanding spring security By example
-
+<!-- TOC -->
+* [Understanding spring security By example](#understanding-spring-security-by-example)
+  * [Learning](#learning-)
+  * [Data Setup](#data-setup-)
+<!-- TOC -->
 ## Learning 
 
 1. By default, when we add spring security to our project,
@@ -9,7 +13,7 @@
 2. Add username and password to `application.yml` and add `.httpBasic(Customizer.withDefaults())` in `SecurityFilterChain` bean. 
    With this change you will be able to `login` with `username/password` provided in `application.yml`
 3. Added `oAuth2 client` support with `Keycloak` using reference [here](https://developers.redhat.com/articles/2023/07/24/how-integrate-spring-boot-3-spring-security-and-keycloak)
-4. Added `Jwt based authentication` for `/greet` api present in Postman collection using `KeyCloak` as resource server used reference [here](https://www.baeldung.com/spring-boot-keycloak)
+4. Added `Jwt based authentication`g for `/greet` api present in Postman collection using `KeyCloak` as resource server used reference [here](https://www.baeldung.com/spring-boot-keycloak)
 
 
 
